@@ -1,0 +1,49 @@
+/* Write your CSS here */
+
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  max-height: 100%;
+  padding: 60px;
+}
+
+.google-logo {
+  height: 80px;
+  width: 220px;
+  margin-bottom: 20px;
+}
+
+.container {
+  box-shadow: 0px 4px 16px 0px #bfbfbf;
+  border-radius: 16px;
+  padding: 15px;
+  padding-bottom: 10px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-logo {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.search-input {
+  background-color: transparent;
+  border-width: 0px;
+  border-color: #ffffff;
+  border-style: none;
+  height: 20px;
+  width: 300px;
+}
+
+.unordered-list {
+  list-style-type: none;
+  padding-left: 0;
+}

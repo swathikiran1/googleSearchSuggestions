@@ -35,6 +35,8 @@
 }
 
 .search-input {
+  outline: none;
+  color: #64748b;
   background-color: transparent;
   border-width: 0px;
   border-color: #ffffff;

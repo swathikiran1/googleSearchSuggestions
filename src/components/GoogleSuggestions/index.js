@@ -9,10 +9,14 @@ import './index.css'
 class GoogleSuggestions extends Component {
   state = {searchInput: '', suggestion1: ''}
 
-  onChangeSuggestion = (event, suggestion) => {
+  onChangeSuggestion = event => {
     const text = event.target.value
+    this.setState({searchInput: text, suggestion1: text})
+  }
+
+  onAutomaticSuggestion = suggestion => {
     const suggestionValue = suggestion
-    this.setState({searchInput: text, suggestion1: suggestionValue})
+    this.setState({suggestion1: suggestionValue, searchInput: suggestionValue})
   }
 
   render() {
@@ -20,7 +24,9 @@ class GoogleSuggestions extends Component {
     const {searchInput, suggestion1} = this.state
 
     const newSuggestionsList = suggestionsList.filter(eachItem =>
-      eachItem.suggestion.toLowerCase().includes(searchInput.toLowerCase()),
+      eachItem.suggestion
+        .toLowerCase()
+        .includes(searchInput.toLowerCase() && suggestion1.toLowerCase()),
     )
 
     return (
@@ -50,7 +56,7 @@ class GoogleSuggestions extends Component {
               <SuggestionItem
                 suggestionObj={eachItem}
                 key={eachItem.id}
-                onChangeInputValue={this.onChangeSuggestion}
+                onChangeInputValue={this.onAutomaticSuggestion}
               />
             ))}
           </ul>

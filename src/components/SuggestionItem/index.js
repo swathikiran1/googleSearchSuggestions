@@ -4,7 +4,7 @@ import './index.css'
 
 const SuggestionItem = props => {
   const {suggestionObj, onChangeInputValue} = props
-  const {suggestion, id} = suggestionObj
+  const {suggestion} = suggestionObj
 
   const onChangeValue = () => {
     onChangeInputValue(suggestion)
